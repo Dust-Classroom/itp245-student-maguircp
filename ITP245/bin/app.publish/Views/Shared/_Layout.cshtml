@@ -8,11 +8,6 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <style>
-        #navLinks {
-            color:whitesmoke
-        }
-    </style>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,10 +15,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarColor03">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home")&nbsp;&nbsp;&nbsp;</li>
-                <li>@Html.ActionLink("About", "About", "Home")&nbsp;&nbsp;&nbsp;</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")&nbsp;&nbsp;&nbsp;</li>
-                <li>@Html.ActionLink("Inventory", "Index", "Inventory")&nbsp;&nbsp;&nbsp;</li>
+                <li id="NavLinkText">@Html.ActionLink("Inventory", "Index", "Inventory", new { area = "Inventory" }, null)&nbsp;&nbsp;&nbsp;</li>
+                <li id="NavLinkText">@Html.ActionLink("About", "About", "Home")&nbsp;&nbsp;&nbsp;</li>
+                <li id="NavLinkText">@Html.ActionLink("Contact", "Contact", "Home")&nbsp;&nbsp;&nbsp;</li>
             </ul>
         </div>
     </nav>
@@ -31,7 +25,7 @@
             @RenderBody()
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - Ciaran Patrick Maguire</p>
+                <p>&copy; @DateTime.Now.Year - Ciaran Patrick Maguire - Reynolds Community College</p>
             </footer>
         </div>
 

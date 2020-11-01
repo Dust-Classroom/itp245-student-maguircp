@@ -3,7 +3,10 @@
 <head>
     <style>
         #inventoryTitle {
-            color: chartreuse;
+            font-style:italic;
+        }
+        #homeLink{
+            font-size:large;
         }
     </style>
     <meta charset="utf-8" />
@@ -18,8 +21,8 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse">
+            <ul id="homeLink" class="nav navbar-nav">
                 @Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)
             </ul>
         </div>
