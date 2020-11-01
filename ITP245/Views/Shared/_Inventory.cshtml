@@ -3,7 +3,10 @@
 <head>
     <style>
         #inventoryTitle {
-            color: chartreuse;
+            font-style:italic;
+        }
+        #homeLink{
+            font-size:large;
         }
     </style>
     <meta charset="utf-8" />
@@ -13,40 +16,29 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top navbar-right">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")
-                    <li>
-                    <li>@Html.ActionLink("Inventory", "Index", "Inventory")
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+            <ul id="homeLink" class="nav navbar-nav">
+                @Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)
+            </ul>
         </div>
-    </div>
+    </nav>
     <h2 id="inventoryTitle" align="center">Inventory Area</h2>
 
     <div align="center">
         <button type="button" class="btn btn-primary">Items</button>
         <button type="button" class="btn btn-success">Purchase Orders</button>
         <button type="button" class="btn btn-info">Vendors</button>
-</div>
+    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ITP245 Application</p>
+            <p>&copy; @DateTime.Now.Year - Ciaran Patrick Maguire - Reynolds Community College</p>
         </footer>
     </div>
 

@@ -23,6 +23,7 @@ textarea {
     max-width: 280px;
 }
 
+/*Set buttons to be round*/
 .btn-outline-primary{
     border-radius: 24px;
 }
