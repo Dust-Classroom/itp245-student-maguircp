@@ -30,9 +30,15 @@
     <h2 id="inventoryTitle" align="center">Inventory Area</h2>
 
     <div align="center">
-        <button type="button" class="btn btn-primary">Items</button>
-        <button type="button" class="btn btn-success">Purchase Orders</button>
-        <button type="button" class="btn btn-info">Vendors</button>
+        @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Items &raquo;"),
+                "Index", "Items", null,
+                new { area = "Inventory", @class = "btn btn-primary" })
+        @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Purchase Orders &raquo;"),
+                "Index", "PurchaseOrders", null,
+                new { area = "Inventory", @class = "btn btn-success" })
+        @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Vendors &raquo;"),
+                "Index", "Vendors", null,
+                new { area = "Inventory", @class = "btn btn-info" })
     </div>
     <div class="container body-content">
         @RenderBody()
