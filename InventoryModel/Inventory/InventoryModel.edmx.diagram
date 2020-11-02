@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38b28f32f067479dabe4049230ff7fff" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="InventoryModel.Category" Width="1.5" PointX="3.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Item" Width="1.5" PointX="5.625" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.PoItem" Width="1.5" PointX="5.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.PurchaseOrder" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Receipt" Width="1.5" PointX="8.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Spoilage" Width="1.5" PointX="7.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="InventoryModel.Vendor" Width="1.5" PointX="1.125" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="InventoryModel.FK_Item_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_PoItem_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Spoilage_Item" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_PoItem_PurchaseOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_Receipt_PoItem" ManuallyRouted="false" />
+        <AssociationConnector Association="InventoryModel.FK_PurchaseOrder_Vendor" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
