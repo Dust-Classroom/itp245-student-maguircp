@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div align="center">
+    <img src="~/Media/charts.jpg" padding="35px"/> 
+    
+</div>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" align="center">
+        <div class="carousel-item active">
+            <h2>Project Overview</h2>
+            <p>
+                This website is being created to view and manage inventory. 
+                This inventory control system will allow the corporation to maximize 
+                it's 'Just in Time' (JIT)business model by providing precise and 
+                accurate inventory metrics sychronized with sales orders and backstock.
+            </p>
+        </div>
+        <div class="carousel-item">
+            <h2>About</h2>
+            <p>
+                This website and it's contents were created by Ciaran Maguire for
+                Professor Dust's ITP245 course at Reynolds Community College.
+            </p>
+        </div>
+        <div class="carousel-item">
+            <h2>Contact</h2>
+            <p>You may contact us by visiting the link found in the main menu.</p>
+        </div>
+    </div>
+</div>
+
+<div align="center">
+    @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Items &raquo;"),
+                "Index", "Inventory/Items", null,
+                new { area = "Inventory", @class = "btn btn-primary" })
+    @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Purchase Orders &raquo;"),
+            "Index", "Inventory/PurchaseOrders", null,
+            new { area = "Inventory", @class = "btn btn-success" })
+    @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Vendors &raquo;"),
+            "Index", "Inventory/Vendors", null,
+            new { area = "Inventory", @class = "btn btn-info" })
+</div>
+

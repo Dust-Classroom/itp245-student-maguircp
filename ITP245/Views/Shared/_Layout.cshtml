@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #NavLinkText {
+            font-size:large;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Insight Inc.</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="nav navbar-nav">
+                <li id="NavLinkText">@Html.ActionLink("Inventory", "Index", "Inventory", new { area = "Inventory" }, null)&nbsp;&nbsp;&nbsp;</li>
+                <li id="NavLinkText">@Html.ActionLink("About", "About", "Home")&nbsp;&nbsp;&nbsp;</li>
+                <li id="NavLinkText">@Html.ActionLink("Contact", "Contact", "Home")&nbsp;&nbsp;&nbsp;</li>
+            </ul>
+        </div>
+    </nav>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Ciaran Patrick Maguire - Reynolds Community College</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
