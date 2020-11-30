@@ -6,7 +6,9 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using InventoryModel.Inventory;
+using Microsoft.Ajax.Utilities;
 
 namespace ITP245.Areas.Inventory.Controllers
 {
@@ -17,7 +19,11 @@ namespace ITP245.Areas.Inventory.Controllers
         // GET: Inventory/Items
         public ActionResult Index()
         {
-            var items = db.Items.Include(i => i.Category);
+            var items = db.Items.Include(c=> c.Category);
+            var categories = new List<String>();
+            categories.Add("All");
+            categories.AddRange(db.Categories.Select(c => c.Name));
+            ViewBag.CategoryId = new SelectList(categories);
             return View(items.ToList());
         }
 
@@ -128,5 +134,30 @@ namespace ITP245.Areas.Inventory.Controllers
             }
             base.Dispose(disposing);
         }
+
+        #region Partial Pages
+
+        public ActionResult _IndexByTag(int id)
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+
+            var items = db.Items
+                .Include(c => c.Category)
+                .Where(c => c.Category.CategoryId.Equals(id))
+                .ToArray();
+
+            return PartialView("_Index", items);
+        }
+
+        public ActionResult _IndexByName(string parm)
+        {
+            db.Configuration.ProxyCreationEnabled = false;
+            var items = db.Items
+                .Include(c => c.Name)
+                .Where(c => c.Name.Contains(parm))
+                .ToArray();
+            return PartialView("_Index", items);
+        }
+        #endregion
     }
 }

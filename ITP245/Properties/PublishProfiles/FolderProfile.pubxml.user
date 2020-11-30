@@ -7,8 +7,113 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <_PublishTargetUrl>C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\bin\app.publish\</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Areas/Inventory/Views/Categories/Create.cshtml">
+      <publishTime>11/02/2020 09:45:09</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Categories/Delete.cshtml">
+      <publishTime>11/02/2020 09:45:10</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Categories/Details.cshtml">
+      <publishTime>11/02/2020 09:45:11</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Categories/Edit.cshtml">
+      <publishTime>11/02/2020 10:24:06</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Categories/Index.cshtml">
+      <publishTime>11/02/2020 11:41:39</publishTime>
+    </File>
     <File Include="Areas/Inventory/Views/Inventory/Index.cshtml">
-      <publishTime>11/01/2020 15:54:39</publishTime>
+      <publishTime>11/02/2020 11:31:39</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Items/Create.cshtml">
+      <publishTime>11/02/2020 09:42:22</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Items/Delete.cshtml">
+      <publishTime>11/02/2020 09:42:24</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Items/Details.cshtml">
+      <publishTime>11/02/2020 09:42:26</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Items/Edit.cshtml">
+      <publishTime>11/02/2020 09:42:29</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Items/Index.cshtml">
+      <publishTime>11/02/2020 11:43:23</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PoItems/Create.cshtml">
+      <publishTime>11/02/2020 09:45:45</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PoItems/Delete.cshtml">
+      <publishTime>11/02/2020 09:45:46</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PoItems/Details.cshtml">
+      <publishTime>11/02/2020 09:45:47</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PoItems/Edit.cshtml">
+      <publishTime>11/02/2020 09:45:48</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PoItems/Index.cshtml">
+      <publishTime>11/02/2020 09:45:50</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PurchaseOrders/Create.cshtml">
+      <publishTime>11/02/2020 09:43:52</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PurchaseOrders/Delete.cshtml">
+      <publishTime>11/02/2020 09:43:53</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PurchaseOrders/Details.cshtml">
+      <publishTime>11/02/2020 09:43:54</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PurchaseOrders/Edit.cshtml">
+      <publishTime>11/02/2020 09:43:55</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PurchaseOrders/Index.cshtml">
+      <publishTime>11/02/2020 11:42:47</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Receipts/Create.cshtml">
+      <publishTime>11/02/2020 09:46:22</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Receipts/Delete.cshtml">
+      <publishTime>11/02/2020 09:46:23</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Receipts/Details.cshtml">
+      <publishTime>11/02/2020 09:46:24</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Receipts/Edit.cshtml">
+      <publishTime>11/02/2020 09:46:26</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Receipts/Index.cshtml">
+      <publishTime>11/02/2020 09:46:27</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Spoilages/Create.cshtml">
+      <publishTime>11/02/2020 09:47:10</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Spoilages/Delete.cshtml">
+      <publishTime>11/02/2020 09:47:11</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Spoilages/Details.cshtml">
+      <publishTime>11/02/2020 09:47:13</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Spoilages/Edit.cshtml">
+      <publishTime>11/02/2020 09:47:14</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Spoilages/Index.cshtml">
+      <publishTime>11/02/2020 11:42:55</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Vendors/Create.cshtml">
+      <publishTime>11/02/2020 09:44:29</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Vendors/Delete.cshtml">
+      <publishTime>11/02/2020 09:44:30</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Vendors/Details.cshtml">
+      <publishTime>11/02/2020 09:44:31</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Vendors/Edit.cshtml">
+      <publishTime>11/02/2020 09:44:32</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Vendors/Index.cshtml">
+      <publishTime>11/02/2020 11:43:54</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/web.config">
       <publishTime>11/01/2020 15:38:51</publishTime>
@@ -20,16 +125,31 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>11/01/2020 16:59:54</publishTime>
+      <publishTime>11/02/2020 11:54:56</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>11/01/2020 16:59:53</publishTime>
+      <publishTime>11/02/2020 11:54:55</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/16/2020 20:38:42</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/16/2020 20:38:56</publishTime>
+    </File>
+    <File Include="bin/InventoryModel.dll">
+      <publishTime>11/02/2020 11:54:16</publishTime>
+    </File>
+    <File Include="bin/InventoryModel.dll.config">
+      <publishTime>11/02/2020 08:59:46</publishTime>
+    </File>
+    <File Include="bin/InventoryModel.pdb">
+      <publishTime>11/02/2020 11:54:16</publishTime>
     </File>
     <File Include="bin/ITP245.dll">
-      <publishTime>11/01/2020 16:59:29</publishTime>
+      <publishTime>11/02/2020 11:54:25</publishTime>
     </File>
     <File Include="bin/ITP245.pdb">
-      <publishTime>11/01/2020 16:59:29</publishTime>
+      <publishTime>11/02/2020 11:54:25</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -272,7 +392,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/30/2020 19:47:14</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>11/01/2020 16:59:40</publishTime>
+      <publishTime>11/02/2020 11:54:36</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>10/31/2020 14:43:29</publishTime>
@@ -608,7 +728,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/31/2020 14:06:39</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/01/2020 16:50:27</publishTime>
+      <publishTime>11/02/2020 11:49:16</publishTime>
     </File>
     <File Include="Views/Inventory/Index.cshtml">
       <publishTime>10/31/2020 17:57:59</publishTime>
@@ -617,7 +737,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/30/2020 19:47:14</publishTime>
     </File>
     <File Include="Views/Shared/_Inventory.cshtml">
-      <publishTime>11/01/2020 16:58:58</publishTime>
+      <publishTime>11/02/2020 09:35:48</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>11/01/2020 16:41:27</publishTime>
@@ -629,7 +749,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/30/2020 19:47:14</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/01/2020 13:53:29</publishTime>
+      <publishTime>11/02/2020 11:54:31</publishTime>
     </File>
   </ItemGroup>
 </Project>

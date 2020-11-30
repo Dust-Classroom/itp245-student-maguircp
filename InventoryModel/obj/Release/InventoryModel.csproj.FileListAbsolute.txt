@@ -1,0 +1,12 @@
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\bin\Release\InventoryModel.dll.config
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\bin\Release\InventoryModel.dll
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\bin\Release\InventoryModel.pdb
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\bin\Release\EntityFramework.dll
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\bin\Release\EntityFramework.xml
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\obj\Release\InventoryModel.csprojAssemblyReference.cache
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\obj\Release\InventoryModel.csproj.CoreCompileInputs.cache
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\obj\Release\InventoryModel.csproj.CopyComplete
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\obj\Release\InventoryModel.dll
+C:\Users\magui\source\repos\itp245-student-maguircp\InventoryModel\obj\Release\InventoryModel.pdb

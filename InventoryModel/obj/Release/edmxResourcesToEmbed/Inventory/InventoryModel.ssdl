@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InventoryModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Name="ItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+    <Property Name="QuantityOnHand" Type="int" Nullable="false" />
+    <Property Name="RetailPrice" Type="money" Nullable="false" />
+    <Property Name="StandardCost" Type="money" Nullable="false" />
+    <Property Name="ImageLocation" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PoItem">
+    <Key>
+      <PropertyRef Name="PoItemId" />
+    </Key>
+    <Property Name="PoItemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurchaseOrderNumber" Type="int" Nullable="false" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Price" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PurchaseOrder">
+    <Key>
+      <PropertyRef Name="PurchaseOrderNumber" />
+    </Key>
+    <Property Name="PurchaseOrderNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VendorId" Type="int" Nullable="false" />
+    <Property Name="PoDate" Type="datetime" Nullable="false" />
+    <Property Name="Amount" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Receipt">
+    <Key>
+      <PropertyRef Name="ReceiptId" />
+    </Key>
+    <Property Name="ReceiptId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PoItemId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="money" Nullable="false" />
+    <Property Name="ReceiptDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Spoilage">
+    <Key>
+      <PropertyRef Name="SpoilageId" />
+    </Key>
+    <Property Name="SpoilageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemId" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="ReasonType" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+    <Property Name="SpoilageDate" Type="datetime" Nullable="false" />
+    <Property Name="Value" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vendor">
+    <Key>
+      <PropertyRef Name="VendorId" />
+    </Key>
+    <Property Name="VendorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Address1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address2" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="30" />
+    <Property Name="State" Type="char" MaxLength="2" />
+    <Property Name="ZipCode" Type="char" MaxLength="10" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Contact" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_Item_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Item" Type="Self.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PoItem_Item">
+    <End Role="Item" Type="Self.Item" Multiplicity="1" />
+    <End Role="PoItem" Type="Self.PoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="ItemId" />
+      </Principal>
+      <Dependent Role="PoItem">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PoItem_PurchaseOrder">
+    <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="PoItem" Type="Self.PoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurchaseOrder">
+        <PropertyRef Name="PurchaseOrderNumber" />
+      </Principal>
+      <Dependent Role="PoItem">
+        <PropertyRef Name="PurchaseOrderNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PurchaseOrder_Vendor">
+    <End Role="Vendor" Type="Self.Vendor" Multiplicity="1" />
+    <End Role="PurchaseOrder" Type="Self.PurchaseOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vendor">
+        <PropertyRef Name="VendorId" />
+      </Principal>
+      <Dependent Role="PurchaseOrder">
+        <PropertyRef Name="VendorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Receipt_PoItem">
+    <End Role="PoItem" Type="Self.PoItem" Multiplicity="1" />
+    <End Role="Receipt" Type="Self.Receipt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PoItem">
+        <PropertyRef Name="PoItemId" />
+      </Principal>
+      <Dependent Role="Receipt">
+        <PropertyRef Name="PoItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Spoilage_Item">
+    <End Role="Item" Type="Self.Item" Multiplicity="1" />
+    <End Role="Spoilage" Type="Self.Spoilage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="ItemId" />
+      </Principal>
+      <Dependent Role="Spoilage">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="InventoryModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="Inventory" store:Type="Tables" />
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="Inventory" store:Type="Tables" />
+    <EntitySet Name="PoItem" EntityType="Self.PoItem" Schema="Inventory" store:Type="Tables" />
+    <EntitySet Name="PurchaseOrder" EntityType="Self.PurchaseOrder" Schema="Inventory" store:Type="Tables" />
+    <EntitySet Name="Receipt" EntityType="Self.Receipt" Schema="Inventory" store:Type="Tables" />
+    <EntitySet Name="Spoilage" EntityType="Self.Spoilage" Schema="Inventory" store:Type="Tables" />
+    <EntitySet Name="Vendor" EntityType="Self.Vendor" Schema="Inventory" store:Type="Tables" />
+    <AssociationSet Name="FK_Item_Category" Association="Self.FK_Item_Category">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Item" EntitySet="Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PoItem_Item" Association="Self.FK_PoItem_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="PoItem" EntitySet="PoItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PoItem_PurchaseOrder" Association="Self.FK_PoItem_PurchaseOrder">
+      <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+      <End Role="PoItem" EntitySet="PoItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PurchaseOrder_Vendor" Association="Self.FK_PurchaseOrder_Vendor">
+      <End Role="Vendor" EntitySet="Vendor" />
+      <End Role="PurchaseOrder" EntitySet="PurchaseOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Receipt_PoItem" Association="Self.FK_Receipt_PoItem">
+      <End Role="PoItem" EntitySet="PoItem" />
+      <End Role="Receipt" EntitySet="Receipt" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Spoilage_Item" Association="Self.FK_Spoilage_Item">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Spoilage" EntitySet="Spoilage" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
