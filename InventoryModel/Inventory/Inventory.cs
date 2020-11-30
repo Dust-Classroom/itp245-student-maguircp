@@ -55,6 +55,7 @@ namespace InventoryModel.Inventory
                  public int ReasonType { get; set; }
 
                 [Display(Name ="Expiration Date")]
+                
                 public DateTime SpoilageDate { get; set; }
 
                 [Display(Name = "Description")]

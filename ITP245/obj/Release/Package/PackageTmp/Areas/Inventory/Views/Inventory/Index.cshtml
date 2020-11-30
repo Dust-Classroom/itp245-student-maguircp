@@ -8,9 +8,15 @@
     <div class="row">
         <div class="col-lg-4">
             <h3>Items</h3>
-            <button type="button" class="btn btn-outline-primary">Items</button>
-            <button type="button" class="btn btn-outline-primary">Categories</button>
-            <button type="button" class="btn btn-outline-primary">Spoilage</button>
+            @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Items &raquo;"),
+                "Index", "Items", null,
+                new { area = "Inventory", @class = "btn btn-primary" })
+            @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Categories &raquo;"),
+                "Index", "Categories", null,
+                new { area = "Inventory", @class = "btn btn-primary" })
+            @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Spoilage &raquo;"),
+                "Index", "Spoilages", null,
+                new { area = "Inventory", @class = "btn btn-primary" })
         </div>
     </div>
 </div>
@@ -19,7 +25,9 @@
     <div class="row">
         <div class="col-lg-4">
             <h3>Purchase Orders</h3>
-            <button type="button" class="btn btn-outline-success">Purchase Orders</button>
+            @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Purchase Orders &raquo;"),
+                "Index", "PurchaseOrders", null,
+                new { area = "Inventory", @class = "btn btn-success" })
         </div>
     </div>
 </div>
@@ -28,7 +36,9 @@
     <div class="row">
         <div class="col-lg-4">
             <h3>Vendors</h3>
-            <button type="button" class="btn btn-outline-info">Vendors</button>
+            @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Vendors &raquo;"),
+                "Index", "Vendors", null,
+                new { area = "Inventory", @class = "btn btn-info" })
         </div>
     </div>
 </div>

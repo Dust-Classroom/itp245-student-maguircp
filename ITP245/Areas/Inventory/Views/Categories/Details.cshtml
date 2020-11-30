@@ -25,3 +25,18 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.CategoryId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 heading">
+            <strong>@Model.Name Items</strong>
+        </div>
+    </div>
+        @foreach (var item in Model.Items)
+        {
+            <div class="row">
+                @Html.ActionLink(item.Name, "Details", "Items", new { area = "Inventory", id = item.ItemId }, null)
+
+            </div>
+        }
+    </div>

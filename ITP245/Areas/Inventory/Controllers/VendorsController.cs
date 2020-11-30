@@ -17,7 +17,11 @@ namespace ITP245.Areas.Inventory.Controllers
         // GET: Inventory/Vendors
         public ActionResult Index()
         {
-            return View(db.Vendors.ToList());
+            var states = new List<String>();
+            states.Add("All");
+            states.AddRange(db.Vendors.Select(ven => ven.State).Distinct().OrderBy(v => v));
+            ViewBag.State = new SelectList(states);
+            return View(db.Vendors.OrderBy(v => v.Name).ToList());
         }
 
         // GET: Inventory/Vendors/Details/5
@@ -123,5 +127,8 @@ namespace ITP245.Areas.Inventory.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+     
     }
 }

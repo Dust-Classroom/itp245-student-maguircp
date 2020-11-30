@@ -77,3 +77,10 @@ C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\obj\Release\ITP245.cs
 C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\obj\Release\ITP245.csproj.CopyComplete
 C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\obj\Release\ITP245.dll
 C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\obj\Release\ITP245.pdb
+C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\bin\EntityFramework.dll
+C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\bin\EntityFramework.SqlServer.dll
+C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\bin\InventoryModel.dll
+C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\bin\InventoryModel.pdb
+C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\bin\InventoryModel.dll.config
+C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\bin\EntityFramework.xml
+C:\Users\magui\source\repos\itp245-student-maguircp\ITP245\bin\EntityFramework.SqlServer.xml

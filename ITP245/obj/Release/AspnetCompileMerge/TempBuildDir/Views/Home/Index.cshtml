@@ -32,3 +32,15 @@
     </div>
 </div>
 
+<div align="center">
+    @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Items &raquo;"),
+                "Index", "Inventory/Items", null,
+                new { area = "Inventory", @class = "btn btn-primary" })
+    @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Purchase Orders &raquo;"),
+            "Index", "Inventory/PurchaseOrders", null,
+            new { area = "Inventory", @class = "btn btn-success" })
+    @Html.ActionLink(HttpUtility.HtmlDecode("&laquo; Vendors &raquo;"),
+            "Index", "Inventory/Vendors", null,
+            new { area = "Inventory", @class = "btn btn-info" })
+</div>
+
