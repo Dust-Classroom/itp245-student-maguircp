@@ -8,67 +8,82 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   </PropertyGroup>
   <ItemGroup>
     <File Include="Areas/Inventory/Views/Categories/Create.cshtml">
-      <publishTime>11/02/2020 09:45:09</publishTime>
+      <publishTime>11/15/2020 18:52:53</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Categories/Delete.cshtml">
-      <publishTime>11/02/2020 09:45:10</publishTime>
+      <publishTime>11/15/2020 18:13:14</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Categories/Details.cshtml">
-      <publishTime>11/02/2020 09:45:11</publishTime>
+      <publishTime>11/16/2020 19:09:50</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Categories/Edit.cshtml">
-      <publishTime>11/02/2020 10:24:06</publishTime>
+      <publishTime>11/15/2020 18:50:07</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Categories/Index.cshtml">
-      <publishTime>11/02/2020 11:41:39</publishTime>
+      <publishTime>11/15/2020 20:29:06</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Categories/_Edit.cshtml">
+      <publishTime>11/15/2020 18:50:57</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Inventory/Index.cshtml">
-      <publishTime>11/02/2020 11:31:39</publishTime>
+      <publishTime>11/15/2020 21:14:01</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Items/Create.cshtml">
-      <publishTime>11/02/2020 09:42:22</publishTime>
+      <publishTime>11/15/2020 19:07:17</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Items/Delete.cshtml">
-      <publishTime>11/02/2020 09:42:24</publishTime>
+      <publishTime>11/15/2020 18:13:00</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Items/Details.cshtml">
-      <publishTime>11/02/2020 09:42:26</publishTime>
+      <publishTime>11/29/2020 19:01:20</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Items/Edit.cshtml">
-      <publishTime>11/02/2020 09:42:29</publishTime>
+      <publishTime>11/15/2020 19:07:17</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Items/Index.cshtml">
-      <publishTime>11/02/2020 11:43:23</publishTime>
+      <publishTime>11/29/2020 22:12:20</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Items/_Edit.cshtml">
+      <publishTime>11/15/2020 19:07:18</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Items/_Index.cshtml">
+      <publishTime>11/16/2020 18:39:51</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PoItems/Create.cshtml">
-      <publishTime>11/02/2020 09:45:45</publishTime>
+      <publishTime>11/15/2020 19:07:17</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PoItems/Delete.cshtml">
-      <publishTime>11/02/2020 09:45:46</publishTime>
+      <publishTime>11/15/2020 18:27:55</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PoItems/Details.cshtml">
       <publishTime>11/02/2020 09:45:47</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PoItems/Edit.cshtml">
-      <publishTime>11/02/2020 09:45:48</publishTime>
+      <publishTime>11/15/2020 19:07:17</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PoItems/Index.cshtml">
-      <publishTime>11/02/2020 09:45:50</publishTime>
+      <publishTime>11/15/2020 18:47:47</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PoItems/_Edit.cshtml">
+      <publishTime>11/15/2020 19:07:18</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PurchaseOrders/Create.cshtml">
-      <publishTime>11/02/2020 09:43:52</publishTime>
+      <publishTime>11/15/2020 19:07:17</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PurchaseOrders/Delete.cshtml">
-      <publishTime>11/02/2020 09:43:53</publishTime>
+      <publishTime>11/15/2020 18:27:55</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PurchaseOrders/Details.cshtml">
-      <publishTime>11/02/2020 09:43:54</publishTime>
+      <publishTime>11/29/2020 19:06:58</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PurchaseOrders/Edit.cshtml">
-      <publishTime>11/02/2020 09:43:55</publishTime>
+      <publishTime>11/15/2020 19:07:17</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/PurchaseOrders/Index.cshtml">
-      <publishTime>11/02/2020 11:42:47</publishTime>
+      <publishTime>11/16/2020 18:44:25</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/PurchaseOrders/_Edit.cshtml">
+      <publishTime>11/15/2020 19:07:18</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Receipts/Create.cshtml">
       <publishTime>11/02/2020 09:46:22</publishTime>
@@ -86,34 +101,43 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/02/2020 09:46:27</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Spoilages/Create.cshtml">
-      <publishTime>11/02/2020 09:47:10</publishTime>
+      <publishTime>11/15/2020 19:07:18</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Spoilages/Delete.cshtml">
-      <publishTime>11/02/2020 09:47:11</publishTime>
+      <publishTime>11/15/2020 18:12:17</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Spoilages/Details.cshtml">
-      <publishTime>11/02/2020 09:47:13</publishTime>
+      <publishTime>11/29/2020 19:05:38</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Spoilages/Edit.cshtml">
-      <publishTime>11/02/2020 09:47:14</publishTime>
+      <publishTime>11/15/2020 19:07:18</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Spoilages/Index.cshtml">
-      <publishTime>11/02/2020 11:42:55</publishTime>
+      <publishTime>11/16/2020 18:42:41</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Spoilages/_Edit.cshtml">
+      <publishTime>11/15/2020 19:32:11</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Vendors/Create.cshtml">
-      <publishTime>11/02/2020 09:44:29</publishTime>
+      <publishTime>11/15/2020 19:07:18</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Vendors/Delete.cshtml">
-      <publishTime>11/02/2020 09:44:30</publishTime>
+      <publishTime>11/15/2020 18:27:55</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Vendors/Details.cshtml">
-      <publishTime>11/02/2020 09:44:31</publishTime>
+      <publishTime>11/29/2020 19:54:46</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Vendors/Edit.cshtml">
-      <publishTime>11/02/2020 09:44:32</publishTime>
+      <publishTime>11/15/2020 19:06:50</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/Vendors/Index.cshtml">
-      <publishTime>11/02/2020 11:43:54</publishTime>
+      <publishTime>11/29/2020 21:21:17</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Vendors/_Edit.cshtml">
+      <publishTime>11/15/2020 19:07:18</publishTime>
+    </File>
+    <File Include="Areas/Inventory/Views/Vendors/_Index.cshtml">
+      <publishTime>11/29/2020 19:08:13</publishTime>
     </File>
     <File Include="Areas/Inventory/Views/web.config">
       <publishTime>11/01/2020 15:38:51</publishTime>
@@ -125,10 +149,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>11/02/2020 11:54:56</publishTime>
+      <publishTime>11/30/2020 07:38:04</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>11/02/2020 11:54:55</publishTime>
+      <publishTime>11/30/2020 07:38:04</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>04/16/2020 20:38:42</publishTime>
@@ -137,19 +161,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/16/2020 20:38:56</publishTime>
     </File>
     <File Include="bin/InventoryModel.dll">
-      <publishTime>11/02/2020 11:54:16</publishTime>
+      <publishTime>11/30/2020 07:30:30</publishTime>
     </File>
     <File Include="bin/InventoryModel.dll.config">
       <publishTime>11/02/2020 08:59:46</publishTime>
     </File>
     <File Include="bin/InventoryModel.pdb">
-      <publishTime>11/02/2020 11:54:16</publishTime>
+      <publishTime>11/30/2020 07:30:30</publishTime>
     </File>
     <File Include="bin/ITP245.dll">
-      <publishTime>11/02/2020 11:54:25</publishTime>
+      <publishTime>11/30/2020 07:30:38</publishTime>
     </File>
     <File Include="bin/ITP245.pdb">
-      <publishTime>11/02/2020 11:54:25</publishTime>
+      <publishTime>11/30/2020 07:30:38</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/05/2018 16:10:50</publishTime>
@@ -383,7 +407,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/31/2020 14:36:25</publishTime>
     </File>
     <File Include="Documentation/changeLog.txt">
-      <publishTime>11/01/2020 11:52:34</publishTime>
+      <publishTime>11/30/2020 07:19:11</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>10/30/2020 19:47:14</publishTime>
@@ -392,7 +416,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/30/2020 19:47:14</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>11/02/2020 11:54:36</publishTime>
+      <publishTime>11/30/2020 07:37:52</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>10/31/2020 14:43:29</publishTime>
@@ -737,10 +761,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/30/2020 19:47:14</publishTime>
     </File>
     <File Include="Views/Shared/_Inventory.cshtml">
-      <publishTime>11/02/2020 09:35:48</publishTime>
+      <publishTime>11/15/2020 21:55:26</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/01/2020 16:41:27</publishTime>
+      <publishTime>11/15/2020 20:26:26</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>10/30/2020 19:47:14</publishTime>

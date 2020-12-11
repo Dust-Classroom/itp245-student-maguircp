@@ -40,12 +40,13 @@
                 @Html.DisplayFor(modelItem => item.Amount)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Vendor.Name)
+                @*Html.DisplayFor(modelItem => item.Vendor.Name)*@
+                @Html.ActionLink(item.Vendor.Name, "Details", "Vendors", new { area = "Inventory", id=item.VendorId}, null)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.PurchaseOrderNumber }) |
-                @Html.ActionLink("Details", "Details", new { id = item.PurchaseOrderNumber }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.PurchaseOrderNumber })
+                @Html.ActionLink("Edit", "Edit", new { id = item.PurchaseOrderNumber }, new { @class = "badge badge-success" }) 
+                @Html.ActionLink("Details", "Details", new { id = item.PurchaseOrderNumber }, new { @class = "badge badge-warning" }) 
+                @Html.ActionLink("Delete", "Delete", new { id = item.PurchaseOrderNumber }, new { @class = "badge badge-danger" })
             </td>
         </tr>
     }

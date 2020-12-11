@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -54,11 +56,15 @@ namespace ITP245.Areas.Inventory.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ItemId,CategoryId,Name,Description,QuantityOnHand,RetailPrice,StandardCost,ImageLocation")] Item item)
+        public ActionResult Create([Bind(Include = "ItemId,CategoryId,Name,Description,QuantityOnHand,RetailPrice,StandardCost,ImageLocation,FileName")] Item item)
         {
             if (ModelState.IsValid)
             {
                 db.Items.Add(item);
+                if (item.FileName != null)
+                {
+                    item.ImageLocation = UploadImage(item.FileName);
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -88,11 +94,16 @@ namespace ITP245.Areas.Inventory.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemId,CategoryId,Name,Description,QuantityOnHand,RetailPrice,StandardCost,ImageLocation")] Item item)
+        public ActionResult Edit([Bind(Include = "ItemId,CategoryId,Name,Description,QuantityOnHand,RetailPrice,StandardCost,ImageLocation,FileName")] Item item)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(item).State = EntityState.Modified;
+                if (item.FileName != null)
+                {
+                    item.ImageLocation = UploadImage(item.FileName);
+                    
+                }
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -157,6 +168,36 @@ namespace ITP245.Areas.Inventory.Controllers
                 .Where(c => c.Name.Contains(parm))
                 .ToArray();
             return PartialView("_Index", items);
+        }
+        #endregion
+
+        #region Images
+        private string UploadImage(HttpPostedFileBase file)
+        {
+            if (Request.Files.Count > 0)
+                try
+                {
+                    var allowedExtensions = new[] { ".jpg", ".png", ".jpeg", ".JPG", ".JPEG", ".PNG" };
+                    var imagePath = ConfigurationManager.AppSettings["ItemImage"];
+                    var mapPath = HttpContext.Server.MapPath(imagePath);
+                    string path = Path.Combine(mapPath, Path.GetFileName(file.FileName));
+                    var ext = Path.GetExtension(file.FileName);
+                    if (allowedExtensions.Contains(ext))
+                    {
+                        file.SaveAs(path);
+                        ViewBag.Message = "File uploaded successfully";
+                        return $"~{imagePath}/{file.FileName}";
+                    }
+                    else
+                    {
+                        ViewBag.Message = "Please use file extensions JPG, JPEG, or PNG";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "Error: " + ex.Message.ToString();
+                }
+            return string.Empty;
         }
         #endregion
     }

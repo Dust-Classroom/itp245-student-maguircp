@@ -42,9 +42,9 @@
             @Html.DisplayFor(modelItem => item.PurchaseOrder.PurchaseOrderNumber)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PoItemId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PoItemId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PoItemId })
+            @Html.ActionLink("Edit", "Edit", new { id=item.PoItemId }, new { @class = "badge badge-success" }) 
+            @Html.ActionLink("Details", "Details", new { id=item.PoItemId }, new { @class = "badge badge-warning" }) 
+            @Html.ActionLink("Delete", "Delete", new { id=item.PoItemId }, new { @class = "badge badge-danger" })
         </td>
     </tr>
 }

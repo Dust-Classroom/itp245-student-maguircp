@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
+using System.Web;
 
 namespace InventoryModel.Inventory
 {
@@ -22,29 +23,32 @@ namespace InventoryModel.Inventory
             }
         }
 
-        [MetadataType(typeof(ItemMetadata))]
-        public partial class Item
+    [MetadataType(typeof(ItemMetadata))]
+    public partial class Item
+    {
+        private sealed class ItemMetadata
         {
-            private sealed class ItemMetadata
-            {
-                [Display(Name = "Item")]
-                public string Name { get; set; }
+            [Display(Name = "Item")]
+            public string Name { get; set; }
 
-                [Display(Name = "Category")]
-                public int CategoryId { get; set; }
+            [Display(Name = "Category")]
+            public int CategoryId { get; set; }
 
-                [Display(Name = "Quantity On Hand")]
-                public int QuantityOnHand { get; set; }
+            [Display(Name = "Quantity On Hand")]
+            public int QuantityOnHand { get; set; }
 
-                [Display(Name = "Retail Price")]
-                [DataType(DataType.Currency)]
-                public double RetailPrice { get; set; }
+            [Display(Name = "Retail Price")]
+            [DataType(DataType.Currency)]
+            public double RetailPrice { get; set; }
 
-                [Display(Name = "Standard Cost")]
-                [DataType(DataType.Currency)]
+            [Display(Name = "Standard Cost")]
+            [DataType(DataType.Currency)]
             public double StandardCost { get; set; }
-            }
         }
+
+        public HttpPostedFileBase FileName {get; set;}
+
+     }
 
         [MetadataType(typeof(SpoilageMetadata))]
         public partial class Spoilage

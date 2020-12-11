@@ -29,3 +29,9 @@
 11/29
 
 5. Tried to fix drop down menus / search feature
+
+12/6
+Added images to About Me and Item Index
+
+12/8
+  Corrected Image Upload via Create / Edit
