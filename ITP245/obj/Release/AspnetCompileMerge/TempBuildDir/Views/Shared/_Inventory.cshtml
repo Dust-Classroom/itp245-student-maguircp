@@ -1,12 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@using System.Reflection;
+@using ITP245.Controllers;
+
+<!DOCTYPE html>
 <html>
 <head>
     <style>
         #inventoryTitle {
-            font-style:italic;
+            font-style: italic;
         }
-        #homeLink{
-            font-size:large;
+
+        #homeLink {
+            font-size: large;
         }
     </style>
     <meta charset="utf-8" />
@@ -44,7 +48,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Ciaran Patrick Maguire - Reynolds Community College</p>
+            <p>&copy; @DateTime.Now.Year - Ciaran Patrick Maguire - Reynolds Community College v:@Assembly.GetAssembly(typeof(HomeController)).GetName().Version.ToString()</p>
         </footer>
     </div>
 

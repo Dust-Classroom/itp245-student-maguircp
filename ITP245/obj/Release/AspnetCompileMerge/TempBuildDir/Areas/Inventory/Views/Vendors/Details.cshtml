@@ -89,3 +89,18 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.VendorId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 heading">
+            <strong>@Model.Name Purchase Orders</strong>
+        </div>
+    </div>
+    @foreach (var po in Model.PurchaseOrders)
+    {
+<div class="row">
+    @po.PurchaseOrderNumber
+    @*Html.ActionLink(po.PurchaseOrderNumber, "Details", "PurchaseOrders", new { area = "Inventory", id = po.PurchaseOrderNumber }, null)*@
+</div>
+    }
+</div>

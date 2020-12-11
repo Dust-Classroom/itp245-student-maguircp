@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using System.Reflection;
+@using ITP245.Controllers;
+
+<!DOCTYPE html>
 <html>
 <head>
     <style>
@@ -30,7 +33,7 @@
             @RenderBody()
             <hr />
             <footer>
-                <p>&copy; @DateTime.Now.Year - Ciaran Patrick Maguire - Reynolds Community College</p>
+                <p>&copy; @DateTime.Now.Year - Ciaran Patrick Maguire - Reynolds Community College v:@Assembly.GetAssembly(typeof(HomeController)).GetName().Version.ToString()</p>
             </footer>
         </div>
 
